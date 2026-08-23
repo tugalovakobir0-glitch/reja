@@ -1,16 +1,22 @@
 const express = require("express");
 const app = express();
+const res = require("express/lib/response");
 const http = require("http");
 // 1
 app.use(express.static(`public`));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // 3
-app.set("views", "veiws");
-app.set("veiw engin", "ejs");
+app.set("views", "views");
+app.set("view engine", "ejs");
 //4
-app.get("/hello", function (rep, res) {
-  res.end(`<h1> Hello World</h1>`);
+
+app.post("/create-item", (req, res) => {
+  console.log(req.body);
+  res.json({ test: `assalomu alaykum hurmatli ` });
+});
+app.get("/", function (rep, res) {
+  res.render("harid");
 });
 
 const server = http.createServer(app);
