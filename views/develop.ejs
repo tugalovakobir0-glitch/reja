@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/brands.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <div class="main_frame">
+        <div class="left_frame">
+          <div class="left_frame_1">
+            <div class="left_frame_box1">
+              <img
+                src="images/Profile.svg"
+                alt=""
+                width="156px"
+                height="142px"
+              />
+            </div>
+            <div class="left_frame_box2"><%= user.name %></div>
+            <div class="left_frame_box3"><%=user.profession %></div>
+            <div class="left_frame_icons">
+              <a href="" class="link_href">
+                <div class="icon">
+                  <img src="icons/Icons-facebook.png" alt="" class="icon_1" />
+                </div>
+              </a>
+              <a href="" class="link_href">
+                <div class="icon">
+                  <img src="icons/Instagram.png" alt="" class="icon_2" />
+                </div>
+              </a>
+              <a href="" class="link_href">
+                <div class="icon">
+                  <img src="icons/Twitter.png" alt="" class="icon_3" />
+                </div>
+              </a>
+              <a href="" class="link_href">
+                <div class="icon">
+                  <img src="icons/Linkeding.png" alt="" class="icon_4" />
+                </div>
+              </a>
+              <a href="" class="link_href">
+                <div class="icon">
+                  <img src="icons/Youtube.png" alt="" class="icon_5" />
+                </div>
+              </a>
+              <a href="" class="link_href">
+                <div class="icon">
+                  <img src="icons/Dribbble.png" alt="" class="icon_6" />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="margener"></div>
+          <div class="left_frame_2">
+            <div class="age_box">
+              <div class="age_box1">Age:</div>
+              <div class="age_box2"><%=user.age %></div>
+            </div>
+            <div class="resedence_box">
+              <div class="resedence_box1">Resedence:</div>
+              <div class="resedence_box2"><%=user.residence%></div>
+            </div>
+            <div class="feerelance_box">
+              <div class="feeredence_box1">Feeredence:</div>
+              <div class="feeredence_box2">Available</div>
+            </div>
+            <div class="address_box">
+              <div class="address_box1">Address:</div>
+              <div class="address_box2"><%=user.adress%></div>
+            </div>
+          </div>
+          <div class="margener"></div>
+          <div class="left_frame_3">
+            <h3>Languages</h3>
+            <div class="left_frame_3-1">
+              <div class="text">
+                <span><%=user.languages[0]%></span>
+                <span>100%</span>
+              </div>
+              <div class="img_left box">
+                <img src="icons/Rectangle 7.png" alt="" />
+              </div>
+            </div>
+            <div class="left_frame_3-2">
+              <div class="text">
+                <span><%=user.languages[1]%></span>
+                <span>80%</span>
+              </div>
+
+              <div class="img_left box">
+                <img src="icons/Line.png" alt="" />
+              </div>
+            </div>
+            <div class="left_frame_3-3">
+              <div class="text">
+                <span><%=user.languages[2]%></span>
+                <span>60%</span>
+              </div>
+              <div class="img_left box">
+                <img src="icons/Line (2).png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="margener"></div>
+          <div class="left_frame_4">
+            <h3>Skills</h3>
+            <div class="left_frame_4-1">
+              <div class="text">
+                <span><%=user.skills[0]%></span>
+                <span>90%</span>
+              </div>
+              <img src="icons/Line (Html).png" alt="" />
+            </div>
+            <div class="left_frame_4-2">
+              <div class="text">
+                <span><%=user.skills[1]%></span>
+                <span>85%</span>
+              </div>
+              <img src="icons/Line (Css).png" alt="" />
+            </div>
+            <div class="left_frame_4-3">
+              <div class="text">
+                <span><%=user.skills[2]%></span>
+                <span>80%</span>
+              </div>
+              <img src="icons/Line (Js).png" alt="" />
+            </div>
+            <div class="left_frame_4-4">
+              <div class="text">
+                <span><%=user.skills[3]%></span>
+                <span>75%</span>
+              </div>
+              <img src="icons/Line (Php).png" alt="" />
+            </div>
+            <div class="left_frame_4-5">
+              <div class="text">
+                <span><%=user.skills[4]%></span>
+                <span>85%</span>
+              </div>
+              <img src="icons/Line (WordPress).png" alt="" />
+            </div>
+          </div>
+          <div class="margener"></div>
+          <div class="left_frame_5">
+            <h3>Extra Skills</h3>
+            <div class="left_frame_5-1">
+              <div class="icons_frame">
+                <img src="icons/Rectangle 23.png" alt="" />
+              </div>
+              <div class="text_frame">
+                <span><%=user.extra_skills[0]%></span>
+              </div>
+            </div>
+            <div class="left_frame_5-2">
+              <div class="icons_frame">
+                <img src="icons/Rectangle 23.png" alt="" />
+              </div>
+
+              <div class="text_frame">
+                <span><%=user.extra_skills[1]%></span>
+              </div>
+            </div>
+            <div class="left_frame_5-3">
+              <div class="icons_frame">
+                <img src="icons/Rectangle 23.png" alt="" />
+              </div>
+
+              <div class="text_frame"><%=user.extra_skills[2]%></div>
+            </div>
+            <div class="left_frame_5-4">
+              <div class="icons_frame">
+                <img src="icons/Rectangle 23.png" alt="" />
+              </div>
+              <div class="text_frame"><%=user.extra_skills[3]%></div>
+            </div>
+          </div>
+          <div class="margener"></div>
+        </div>
+        <div class="min_frame">
+          <div class="box1">
+            <div class="box1text">
+              <div class="text1"><h1><%=user.work_place%></h1></div>
+              <span><%=user.about_me%></span>
+
+              <a href=""><button>About me</button></a></div>
+              <img src="icons/Your Image 1 (1).png" alt="" />
+              <img src="icons/Rectangle 51.png" alt="" class="cubec" />
+              <img src="icons/Rectangle 52.svg" alt="" class="cubec1" />
+              <img src="icons/Polygon 1.svg" alt="" class="cubec2" />
+              <img src="icons/Ellipse 12.svg" alt="" class="cubec3" />
+
+              <img src="icons/Ellipse 16 (1).svg" alt="" class="cubec4" />
+              <img src="icons/Ellipse 13.png" alt="" class="cubec5" />
+              <img src="icons/Ellipse 15.svg" alt="" class="cubec6" />
+            </div>
+            <div class="box2"></div>
+          </div>
+          <div class="right_frame"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
