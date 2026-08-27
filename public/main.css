@@ -378,15 +378,6 @@
   top: 10px;
   right: 30px;
 }
-.min_frame .box2 {
-  width: 970px;
-  height: 653px;
-  margin-top: 130px;
-  display: flex;
-  flex-direction: column;
-
-  background: #282828;
-}
 
 .min_frame .cubec {
   position: absolute;
@@ -452,6 +443,132 @@
   height: 51px;
 
   background-color: #ffb400;
+}
+
+.min_frame .box2 {
+  width: 970px;
+  height: 653px;
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box2 .box2-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2 .box2-2 {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.box2-2frame {
+  margin-left: 25px;
+  position: relative;
+  width: 310px;
+  height: 225px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  background-color: #fff;
+}
+.box2-2frame img {
+  position: absolute;
+  top: 20px;
+  width: 80px;
+  height: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+.box2-2frame .box2-2textframe {
+  margin-left: 20px;
+  margin-top: 90px;
+  width: 158px;
+  height: 22px;
+}
+
+.box2-2frame .box2-2text {
+  margin-left: 22px;
+  margin-top: 50px;
+}
+
+.box2-2frame1 {
+  margin-left: 5px;
+  position: relative;
+  width: 310px;
+  height: 225px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  background-color: #fff;
+}
+.box2-2frame1 img {
+  position: absolute;
+  top: 20px;
+  width: 80px;
+  height: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+.box2-2frame1 .box2-2textframe {
+  margin-left: 20px;
+  margin-top: 90px;
+  width: 158px;
+  height: 22px;
+}
+
+.box2-2frame1 .box2-2text {
+  margin-left: 22px;
+  margin-top: 50px;
+  width: 134px;
+  height: 24px;
+}
+.box2-2frame2 {
+  margin-left: 25px;
+  position: relative;
+  width: 310px;
+  height: 225px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  background-color: #fff;
+}
+.box2-2frame2 .box2-2textframe {
+  margin-left: 20px;
+  margin-top: 30px;
+  width: 158px;
+  height: 22px;
+}
+
+.box2-2frame2 .box2-2text {
+  margin-left: 22px;
+  margin-top: 50px;
+}
+
+.box2-2frame2 a {
+  margin-top: 20px;
+
+  text-decoration: none;
+  color: #ffb400;
 }
 .main_frame .right_frame {
   position: relative;
