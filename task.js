@@ -1,3 +1,16 @@
+// A Task Homework
+function Homework(e, letter) {
+  let count = 0;
+  for (let i = 0; letter[i]; i++) {
+    if (letter[i] === e) {
+      count++;
+    }
+  }
+  console.log(`${e} harfi ${count}marta qatnashgan!`);
+}
+
+Homework("e", "energy");
+
 // A Task
 
 // Callback
