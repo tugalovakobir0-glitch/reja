@@ -25,13 +25,30 @@ app.set("view engine", "ejs");
 //4
 
 app.post("/create-item", (req, res) => {
-  console.log(req.body);
-  res.json({ test: `assalomu alaykum hurmatli ` });
+  console.log("user entered /create-item");
+  const new_reja = req.body.reja;
+  db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.end("nimadir xato");
+    } else {
+      res.end("Yangi narsa qushildi");
+    }
+  });
 });
 app.get("/develop", (req, res) => {
   res.render("develop", { user: user });
 });
 app.get("/", function (rep, res) {
-  res.render("reja");
+  console.log("user entered /");
+  db.collection("plans")
+    .find()
+    .toArray((err, data) => {
+      if (err) {
+        res.end("nimadir hato ketdi");
+      } else {
+        res.render("reja", { items: data });
+      }
+    });
 });
 module.exports = app;

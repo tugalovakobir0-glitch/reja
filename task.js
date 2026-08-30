@@ -1,15 +1,30 @@
-// A Task Homework
-function Homework(e, letter) {
+//MitTask -B
+function Homework2(letter) {
   let count = 0;
   for (let i = 0; letter[i]; i++) {
-    if (letter[i] === e) {
+    if (letter[i] >= "0" && letter[i] >= "9") {
       count++;
     }
   }
-  console.log(`${e} harfi ${count}marta qatnashgan!`);
+  console.log(`Bu qatorda sonlar ${count}marta qatnashgan!`);
 }
 
-Homework("e", "energy");
+Homework2("guihuhgggguh888r67965r8475e67887654w5678op9p76543678979654367");
+
+// A Task Homework
+// Taskning sharti:Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi letterni ikkinchi parametrdagi sozdan qatnashga sonini return qilishi kerak boladi.
+
+// function Homework(e, letter) {
+//   let count = 0;
+//   for (let i = 0; letter[i]; i++) {
+//     if (letter[i] === e) {
+//       count++;
+//     }
+//   }
+//   console.log(`${e} harfi ${count}marta qatnashgan!`);
+// }
+
+// Homework("e", "energy");
 
 // A Task
 
@@ -46,15 +61,15 @@ Homework("e", "energy");
 
 // sync promise then catch await;
 
-console.log("Jack Ma maslahatlaria!");
-const list = [
-  "Yaxshin talaba buling!" /*0,20*/,
-  "Yaxshi boshliq tanlang va kuproq hato qiling!" /*20,30*/,
-  "Siz zur bugan ishni boshlang!" /*30,40*/,
-  "Uzingizni ishlaringizni boshlang!" /*40,50*/,
-  "Yoshlarga invetsissa qiling!" /*50,60*/,
-  "endi dam oling,endi befoyda!" /*60<*/,
-];
+// console.log("Jack Ma maslahatlaria!");
+// const list = [
+//   "Yaxshin talaba buling!" /*0,20*/,
+//   "Yaxshi boshliq tanlang va kuproq hato qiling!" /*20,30*/,
+//   "Siz zur bugan ishni boshlang!" /*30,40*/,
+//   "Uzingizni ishlaringizni boshlang!" /*40,50*/,
+//   "Yoshlarga invetsissa qiling!" /*50,60*/,
+//   "endi dam oling,endi befoyda!" /*60<*/,
+// ];
 
 // async function maslahatBering(a) {
 //   if (typeof a !== "number") throw new Error("iltimos raqam kriting");
@@ -86,28 +101,28 @@ const list = [
 
 // run();
 
-async function maslahatBering(a) {
-  if (typeof a !== "number") throw new Error("iltimos raqam kriting");
-  else if (a <= 20) return list[0];
-  else if (a > 20 && a <= 30) return list[1];
-  else if (a > 30 && a <= 40) return list[2];
-  else if (a > 40 && a <= 50) return list[3];
-  else if (a <= 60) return (null, list[4]);
-  else {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(list[5]);
-      }, 5000);
-    });
-  }
-}
-async function run() {
-  let javob = await maslahatBering(10);
-  console.log(javob);
-  javob = await maslahatBering(100);
-  console.log(javob);
-  javob = await maslahatBering(50);
-  console.log(javob);
-}
+// async function maslahatBering(a) {
+//   if (typeof a !== "number") throw new Error("iltimos raqam kriting");
+//   else if (a <= 20) return list[0];
+//   else if (a > 20 && a <= 30) return list[1];
+//   else if (a > 30 && a <= 40) return list[2];
+//   else if (a > 40 && a <= 50) return list[3];
+//   else if (a <= 60) return (null, list[4]);
+//   else {
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//         resolve(list[5]);
+//       }, 5000);
+//     });
+//   }
+// }
+// async function run() {
+//   let javob = await maslahatBering(10);
+//   console.log(javob);
+//   javob = await maslahatBering(100);
+//   console.log(javob);
+//   javob = await maslahatBering(50);
+//   console.log(javob);
+// }
 
-run();
+// run();
