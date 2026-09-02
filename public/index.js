@@ -30,7 +30,7 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     .then((response) => {
       document
         .getElementById("item-list")
-        .insertAdjacentHtml("beforeend", itemTemlate(response.data));
+        .insertAdjacentHTML("beforeend", itemTemlate(response.data));
     })
     .catch((err) => {});
   createField.value = "";
