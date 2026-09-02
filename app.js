@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set("views", "views");
 app.set("view engine", "ejs");
 //4
-
+const Mongodb = require("mongodb");
 app.post("/create-item", (req, res) => {
   console.log("user entered /create-item");
   const new_reja = req.body.reja;
@@ -32,8 +32,21 @@ app.post("/create-item", (req, res) => {
     res.json(data.ops[0]);
   });
 });
+app.post("/delete.items", (req, res) => {
+  const id = req.body.id;
+  db.collection(
+    "plans",
+    { _id: new Mongodb.ObjectId(id) },
+    function (err, data) {
+      res.json({ state: "Muffaqiyatli qabul qilindi" });
+    },
+  );
+});
+
 app.get("/develop", (req, res) => {
-  res.render("develop", { user: user });
+  res.render("develop", { user: user }, function (err, data) {
+    res.json({ state: "mufaqqiyatli ucirildi!" });
+  });
 });
 app.get("/", function (rep, res) {
   console.log("user entered /");

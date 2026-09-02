@@ -1,3 +1,5 @@
+// const { default: axios } = require("axios");
+
 console.log("index.js ishga tushdi");
 function itemTemlate(item) {
   return ` <li class="list-group-item list-group-item-info d-flex align-items-between">
@@ -33,4 +35,21 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     .catch((err) => {});
   createField.value = "";
   createField.focus();
+});
+
+document.addEventListener("click", function (e) {
+  console.log(e.target);
+  if (e.target.classList.contains("delete-me")) {
+    if (confirm("Aniq uchirmoqchimisiz?")) {
+      axios
+        .post("/delete.items", { _id: e.target.getAttribute("data_id") })
+        .then((respons) => {
+          console.log(respons.data);
+          e.target.parentElement.parentElement.remove();
+        })
+        .catch((err) => {
+          console.log("Yana qaytadan urinib kuring!");
+        });
+    }
+  }
 });
