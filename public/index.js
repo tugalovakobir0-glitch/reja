@@ -15,7 +15,7 @@ function itemTemlate(item) {
 
       <button
         data-id= ${item._id}
-        class="delete-btn btn btn-danger btn-sm"
+        class="delete-me btn btn-danger btn-sm"
       >
         O'chirish
       </button>
@@ -42,7 +42,7 @@ document.addEventListener("click", function (e) {
   if (e.target.classList.contains("delete-me")) {
     if (confirm("Aniq uchirmoqchimisiz?")) {
       axios
-        .post("/delete.items", { _id: e.target.getAttribute("data_id") })
+        .post("/delete.items", { _id: e.target.getAttribute("data-id") })
         .then((respons) => {
           console.log(respons.data);
           e.target.parentElement.parentElement.remove();

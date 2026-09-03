@@ -33,12 +33,14 @@ app.post("/create-item", (req, res) => {
   });
 });
 app.post("/delete.items", (req, res) => {
-  const id = req.body.id;
-  db.collection(
-    "plans",
+  const id = req.body._id;
+
+  db.collection("plans").deleteOne(
     { _id: new Mongodb.ObjectId(id) },
     function (err, data) {
-      res.json({ state: "Muffaqiyatli qabul qilindi" });
+      res.json({
+        state: "Muvaffaqiyatli o'chirildi",
+      });
     },
   );
 });
