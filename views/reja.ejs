@@ -4,12 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>REJA</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css">
   </head>
   <body style="background-color: #b8bbd1">
     <div class="container">
@@ -36,7 +31,7 @@
       </form>
     </div>
 <ul id="item-list" class="list-group pb-5">
-  <% items.forEach(function(item) { %>
+  <% items.map(function(item) { %>
   <li class="list-group-item list-group-item-info d-flex align-items-between">
     <span class="item-text"><%= item.reja %></span>
 
@@ -59,7 +54,7 @@
   <% }) %>
 </ul>
     
-      <button class="btn btn-danger" style="border-radius: 20px">
+      <button id="clean_all"   class="btn btn-danger" style="border-radius: 20px">
         Yangi rejalarni uchirish
       </button>
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

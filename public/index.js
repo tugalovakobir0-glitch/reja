@@ -1,5 +1,9 @@
 // const { default: axios } = require("axios");
 
+// const { default: axios } = require("axios");
+
+// const { default: axios } = require("axios");
+
 console.log("index.js ishga tushdi");
 function itemTemlate(item) {
   return ` <li class="list-group-item list-group-item-info d-flex align-items-between">
@@ -52,4 +56,35 @@ document.addEventListener("click", function (e) {
         });
     }
   }
+  //edit-me
+  if (e.target.classList.contains("edit-me")) {
+    let userInput = prompt(
+      "uzgartirishni kriting",
+      e.target.parentElement.parentElement.querySelector(".item-text")
+        .innerHTML,
+    );
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: e.target.getAttribute("data-id"),
+          new_Input: userInput,
+        })
+        .then((response) => {
+          console.log(response.data);
+          e.target.parentElement.parentElement.querySelector(
+            ".item-text",
+          ).innerHTML = userInput;
+        })
+        .catch((err) => {
+          console.log("Hatolik yuz berdi yana bir marta urinib kuring!");
+        });
+    }
+  }
+});
+
+document.getElementById("clean_all").addEventListener("click", function () {
+  axios.post("/delete-all", { delete_all: true }).then((response) => {
+    alert(response.data.state);
+    document.location.reload();
+  });
 });
