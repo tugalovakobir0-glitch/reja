@@ -1,75 +1,93 @@
+//MitTask-D
+//taskni sharti:Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+
+//Bajarish
+function content(string1, string2) {
+  if (
+    string2.includes(string1[0]) &&
+    string2.includes(string1[1]) &&
+    string2.includes(string1[2]) &&
+    string2.includes(string1[3])
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(content("salom", "malomatlar qila"));
+
 //MitTask- C
 //taskni sharti:Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
 // MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
 // Boshladik:
-const moment = require("moment");
-class Shop {
-  constructor(cola, shaurma, lagmon) {
-    this.cola = cola;
-    this.shaurma = shaurma;
-    this.lagmon = lagmon;
-  }
-  Qushish(mahsulot, soni) {
-    if (mahsulot === "cola") {
-      this.cola += soni;
-      const vaqt = moment().format("HH:mm");
-      console.log(`hozzir ${vaqt}da yangi ${mahsulot} ${soni}ta qushildi`);
-    } else if (mahsulot === "shaurma") {
-      this.shaurma += soni;
-      const vaqt = moment().format("HH:mm");
-      console.log(`hozzir ${vaqt}da yangi ${mahsulot} ${soni}ta qushildi`);
-    } else if (mahsulot === "lagmon") {
-      this.lagmon += soni;
-      const vaqt = moment().format("HH:mm");
-      console.log(`hozzir ${vaqt}da yangi ${mahsulot} ${soni}ta qushildi`);
-    }
-  }
-  Ayirish(mahsulot2, soni2) {
-    if (mahsulot2 === "cola") {
-      this.cola -= soni2;
-      const vaqt = moment().format("HH:mm");
-      console.log(`hozzir ${vaqt}da yangi ${mahsulot2} ${soni2}ta olindi`);
-    } else if (mahsulot2 === "shaurma") {
-      this.shaurma -= soni2;
-      const vaqt = moment().format("HH:mm");
-      console.log(`hozzir ${vaqt}da yangi ${mahsulot2} ${soni2}ta olindi`);
-    } else if (mahsulot2 === "lagmon") {
-      this.lagmon -= soni2;
-      const vaqt = moment().format("HH:mm");
-      console.log(`hozzir ${vaqt}da yangi ${mahsulot2} ${soni2}ta olindi`);
-    }
-  }
-  Qoldiq() {
-    const vaqt = moment().format("HH:mm");
-    console.log(
-      `Hozzir ${vaqt}da mahsulotlar soni Cola: ${this.cola}ta,Shaurma: ${this.shaurma} ta va Lagmon: ${this.lagmon} ta bor!`,
-    );
-  }
-}
-const new_shop = new Shop(5, 4, 3);
-console.log(new_shop);
-new_shop.Qushish("cola", 16);
-console.log(new_shop);
-console.log("=============");
-new_shop.Qushish("shaurma", 4);
-console.log(new_shop);
-new_shop.Qoldiq();
-console.log("=============");
+// const moment = require("moment");
+// class Shop {
+//   constructor(cola, shaurma, lagmon) {
+//     this.cola = cola;
+//     this.shaurma = shaurma;
+//     this.lagmon = lagmon;
+//   }
+//   Qushish(mahsulot, soni) {
+//     if (mahsulot === "cola") {
+//       this.cola += soni;
+//       const vaqt = moment().format("HH:mm");
+//       console.log(`hozzir ${vaqt}da yangi ${mahsulot} ${soni}ta qushildi`);
+//     } else if (mahsulot === "shaurma") {
+//       this.shaurma += soni;
+//       const vaqt = moment().format("HH:mm");
+//       console.log(`hozzir ${vaqt}da yangi ${mahsulot} ${soni}ta qushildi`);
+//     } else if (mahsulot === "lagmon") {
+//       this.lagmon += soni;
+//       const vaqt = moment().format("HH:mm");
+//       console.log(`hozzir ${vaqt}da yangi ${mahsulot} ${soni}ta qushildi`);
+//     }
+//   }
+//   Ayirish(mahsulot2, soni2) {
+//     if (mahsulot2 === "cola") {
+//       this.cola -= soni2;
+//       const vaqt = moment().format("HH:mm");
+//       console.log(`hozzir ${vaqt}da yangi ${mahsulot2} ${soni2}ta olindi`);
+//     } else if (mahsulot2 === "shaurma") {
+//       this.shaurma -= soni2;
+//       const vaqt = moment().format("HH:mm");
+//       console.log(`hozzir ${vaqt}da yangi ${mahsulot2} ${soni2}ta olindi`);
+//     } else if (mahsulot2 === "lagmon") {
+//       this.lagmon -= soni2;
+//       const vaqt = moment().format("HH:mm");
+//       console.log(`hozzir ${vaqt}da yangi ${mahsulot2} ${soni2}ta olindi`);
+//     }
+//   }
+//   Qoldiq() {
+//     const vaqt = moment().format("HH:mm");
+//     console.log(
+//       `Hozzir ${vaqt}da mahsulotlar soni Cola: ${this.cola}ta,Shaurma: ${this.shaurma} ta va Lagmon: ${this.lagmon} ta bor!`,
+//     );
+//   }
+// }
+// const new_shop = new Shop(5, 4, 3);
+// console.log(new_shop);
+// new_shop.Qushish("cola", 16);
+// console.log(new_shop);
+// console.log("=============");
+// new_shop.Qushish("shaurma", 4);
+// console.log(new_shop);
+// new_shop.Qoldiq();
+// console.log("=============");
 
-new_shop.Qushish("lagmon", 9);
-console.log(new_shop);
+// new_shop.Qushish("lagmon", 9);
+// console.log(new_shop);
 
-console.log("========");
-new_shop.Ayirish("cola", 20);
-console.log(new_shop);
-console.log("=============");
-new_shop.Ayirish("shaurma", 8);
-console.log(new_shop);
-console.log("=============");
+// console.log("========");
+// new_shop.Ayirish("cola", 20);
+// console.log(new_shop);
+// console.log("=============");
+// new_shop.Ayirish("shaurma", 8);
+// console.log(new_shop);
+// console.log("=============");
 
-new_shop.Ayirish("lagmon", 1);
-console.log(new_shop);
-new_shop.Qoldiq();
+// new_shop.Ayirish("lagmon", 1);
+// console.log(new_shop);
+// new_shop.Qoldiq();
 
 //MitTask -B
 // function Homework2(letter) {
