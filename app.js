@@ -43,7 +43,7 @@ app.post("/create-item", (req, res) => {
     },
   );
 });
-app.post("/delete.items", (req, res) => {
+app.post("/delete.item", (req, res) => {
   const id = req.body._id;
   //qadam 2:malumotlar fronteddan bacentga kirdi
   //qadam 3:malumotlar  bacentdan databacega ketdi
