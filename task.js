@@ -14,7 +14,7 @@ function content(string1, string2) {
     return false;
   }
 }
-console.log(content("salom", "malomatlar qila"));
+console.log(content("salom", "malomatlar qilsa"));
 
 //MitTask- C
 //taskni sharti:Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.

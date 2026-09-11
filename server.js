@@ -1,4 +1,5 @@
 const http = require("http");
+//bu bizga http link yaratishda foydalandik
 const mongodb = require("mongodb");
 let db;
 const connectionString =
